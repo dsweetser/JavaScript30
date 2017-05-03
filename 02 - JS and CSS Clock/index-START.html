@@ -75,8 +75,8 @@
 
   const clock = function (){
     const now = new Date();
-    console.log(now.getSeconds());
-    secondsHand.style.transform = `rotate(${((now.getSeconds())/60)*360}deg)`
+    const secondDegrees = (now.getSeconds()/60*360) + 90;
+    secondsHand.style.transform = `rotate(${secondDegrees}deg)`
 }
   setInterval(clock, 1000)
 
