@@ -71,12 +71,13 @@
   </style>
 
   <script>
-  const now = new Date();
-  console.log(now.getSeconds());
 
-  const seconds = function () {
-    
-  }
+  const clock = function (){
+    const now = new Date();
+
+    console.log(now.getSeconds());
+}
+  setInterval(clock, 1000)
 
   </script>
 </body>
