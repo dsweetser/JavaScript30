@@ -72,11 +72,17 @@
 
   <script>
   const secondsHand = document.querySelector('.second-hand')
+  const minHand = document.querySelector('.min-hand')
+  console.log(minHand)
 
   const clock = function (){
     const now = new Date();
+
     const secondDegrees = (now.getSeconds()/60*360) + 90;
     secondsHand.style.transform = `rotate(${secondDegrees}deg)`
+
+
+
 }
   setInterval(clock, 1000)
 
