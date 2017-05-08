@@ -8,6 +8,11 @@
   <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
 
   <div class="controls">
+    <label for="spacing">Spacing:</label>
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
 
     <label for="base">Base Color</label>
     <input id="base" type="color" name="base" value="#ffc600">
@@ -59,10 +64,16 @@
 
   <script>
   let color = document.getElementById('base');
+  let blur = document.getElementById('blur');
 
   color.addEventListener('change', function(){
     document.documentElement.style.setProperty('--base', color.value)
-  })
+  });
+
+  blur.addEventListener('change', function(){
+    console.log(blur.value)
+    document.documentElement.style.setProperty('--blur', blur.value +'px')
+  });
 
   </script>
 
