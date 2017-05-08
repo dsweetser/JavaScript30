@@ -64,8 +64,10 @@
 
   <script>
   let color = document.getElementById('base');
-  console.log(color.value);
 
+  color.addEventListener('change', function(){
+    console.log(color.value)
+  })
 
   </script>
 
