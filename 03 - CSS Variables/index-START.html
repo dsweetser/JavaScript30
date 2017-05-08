@@ -65,6 +65,7 @@
   <script>
   let color = document.getElementById('base');
   let blur = document.getElementById('blur');
+  let spacing = document.getElementById('spacing');
 
   color.addEventListener('change', function(){
     document.documentElement.style.setProperty('--base', color.value)
@@ -73,6 +74,10 @@
   blur.addEventListener('change', function(){
     console.log(blur.value)
     document.documentElement.style.setProperty('--blur', blur.value +'px')
+  });
+
+  spacing.addEventListener('change', function(){
+    document.documentElement.style.setProperty('--spacing', spacing.value + 'px')
   });
 
   </script>
